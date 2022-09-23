@@ -42,7 +42,7 @@ public class ClientController {
 		client.setAddress(clientRequest.getAddress());
 		
 		clientService.add(client);
-		return new ResponseEntity<Client>(client, HttpStatus.OK);
+		return new ResponseEntity<Client>(client, HttpStatus.CREATED);
 	}
 
 	@GetMapping(value = "/search/{searchPhrase}")
